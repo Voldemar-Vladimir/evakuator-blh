@@ -1,0 +1,55 @@
+/* Общий тёмный фон и светлый текст */
+body {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+/* Карточки в каталоге */
+.card.part-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+.card.part-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(220, 53, 69, 0.3);
+}
+
+/* Ссылки */
+a {
+    color: #dc3545;
+    text-decoration: none;
+}
+a:hover {
+    color: #ff4d4d;
+}
+
+/* Кнопки красные */
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: #fff;
+}
+.btn-danger:hover {
+    background-color: #c82333;
+}
+
+/* Поля ввода */
+.form-control, .form-select {
+    background-color: #2a2a2a !important;
+    color: #ffffff !important;
+    border-color: #555 !important;
+}
+.form-control::placeholder {
+    color: #aaa !important;
+}
+.form-label {
+    color: #ffffff !important;
+}
+
+/* Таблицы */
+.table-dark {
+    --bs-table-bg: #2a2a2a;
+}
+.table-danger {
+    --bs-table-bg: #3a1a1a;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Эвакуатор 24/7 Балашиха</title>
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- Основной CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>🚛 Эвакуатор 24/7</h1>
+            <p class="subtitle">Балашиха · Железнодорожный · Реутов · Москва · МО</p>
+
+            <p class="text">
+                ✅ Круглосуточная эвакуация автомобилей<br>
+                🚗 Спецтранспорт для любых ситуаций: ДТП, неисправности, перевозка авто<br>
+                💰 Доступные цены от 2000 ₽ – скидки постоянным клиентам<br>
+                ⚡ Быстрый выезд – ближайший эвакуатор в 3 км от вас<br>
+                🛠 14 эвакуаторов доступно сейчас в Балашихе и области<br>
+                🔒 Аккуратная погрузка и надёжная фиксация авто
+            </p>
+
+            <!-- Карусель Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="/static/images/photo1.jpg" alt="Эвакуатор 1"></div>
+                    <div class="swiper-slide"><img src="/static/images/photo2.jpg" alt="Эвакуатор 2"></div>
+                    <div class="swiper-slide"><img src="/static/images/photo3.jpg" alt="Эвакуатор 3"></div>
+                    <div class="swiper-slide"><img src="/static/images/photo4.jpg" alt="Эвакуатор 4"></div>
+                    <div class="swiper-slide"><img src="/static/images/photo5.jpg" alt="Эвакуатор 5"></div>
+                    <div class="swiper-slide"><img src="/static/images/photo6.jpg" alt="Эвакуатор 6"></div>
+                    <div class="swiper-slide"><img src="/static/images/photo7.jpg" alt="Эвакуатор 7"></div>
+                    <div class="swiper-slide"><img src="/static/images/photo8.jpg" alt="Эвакуатор 8"></div>
+                    <div class="swiper-slide"><img src="/static/images/photo9.jpg" alt="Эвакуатор 9"></div>
+                    <div class="swiper-slide"><img src="/static/images/photo10.jpg" alt="Эвакуатор 10"></div>
+                    <div class="swiper-slide"><img src="/static/images/photo11.jpg" alt="Эвакуатор 11"></div>
+                    <div class="swiper-slide"><img src="/static/images/photo12.jpg" alt="Эвакуатор 12"></div>
+                    <div class="swiper-slide"><img src="/static/images/photo13.jpg" alt="Эвакуатор 13"></div>
+                    <div class="swiper-slide"><img src="/static/images/photo14.jpg" alt="Эвакуатор 14"></div>
+                    <div class="swiper-slide"><img src="/static/images/photo15.jpg" alt="Эвакуатор 15"></div>
+                </div>
+                <!-- Стрелки -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <!-- Точки -->
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <a href="tel:+79661510003" class="call-button">📞 Позвонить прямо сейчас</a>
+            <p class="phone">+7 (966) 151-00-03</p>
+        </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Инициализация -->
+    <script>
+        const swiper = new Swiper('.mySwiper', {
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
+</body>
+</html>
