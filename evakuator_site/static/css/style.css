@@ -257,7 +257,37 @@ h1 {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
+/* FAQ */
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 15px;
+}
 
+.faq-item {
+    background: rgba(0,0,0,0.4);
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.faq-question {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.faq-answer {
+    font-size: 15px;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+/* Кнопка вверху */
+.top-btn {
+    margin-bottom: 25px;
+}
 /* Мобильная адаптация */
 @media (max-width: 480px) {
     .container {
