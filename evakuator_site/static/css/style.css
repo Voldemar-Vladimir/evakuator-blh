@@ -1,23 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
 
 body {
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
-    /* 🔥 Выбери свой градиент (закомментируй/раскомментируй) */
-    /* Вариант 1 – Огненно-красный (дефолт) */
-     background: linear-gradient(135deg, #1a0a00 0%, #4a1500 40%, #8b2500 100%);
-    /* Вариант 2 – Холодный синий */
-    /* background: linear-gradient(135deg, #0a0f1a 0%, #1a2f4a 40%, #2a508b 100%); */
-    /* Вариант 3 – Зелёный (премиум) */
-    /* background: linear-gradient(135deg, #0a1a0f 0%, #1a4a2f 40%, #2b8b4a 100%); */
-    /* Вариант 4 – Фиолетовый (дерзкий) */
-    /* background: linear-gradient(135deg, #1a0a1f 0%, #4a1a4f 40%, #8b2b8b 100%); */
+    background: linear-gradient(135deg, #ff4b00 0%, #ff8c00 50%, #ffb300 100%);
     color: white;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-size: cover;
+    background-position: center;
 }
 
 .container {
@@ -27,35 +21,40 @@ body {
 }
 
 .card {
-    background: rgba(20, 20, 20, 0.8);
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(20px);
     border-radius: 30px;
     padding: 30px 20px;
     text-align: center;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 h1 {
-    font-size: 32px;
-    font-weight: 700;
+    font-size: 36px;
+    font-weight: 900;
     margin-bottom: 5px;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    color: #fff;
 }
 
 .subtitle {
-    font-size: 14px;
-    opacity: 0.8;
+    font-size: 16px;
+    opacity: 0.9;
     margin-bottom: 20px;
     letter-spacing: 1px;
+    font-weight: 700;
 }
 
 .text {
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.6;
     text-align: left;
     margin-bottom: 25px;
-    opacity: 0.9;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    border-radius: 15px;
+    font-weight: 500;
 }
 
 /* Стили для Swiper */
@@ -95,35 +94,61 @@ h1 {
 }
 .swiper-pagination-bullet-active {
     opacity: 1;
-    background: #ff3c00;
+    background: #fffb00;
 }
 
 .call-button {
     display: inline-block;
-    background: linear-gradient(135deg, #ff3c00, #ff6b00);
-    color: white;
-    font-size: 20px;
-    padding: 16px 35px;
+    background: linear-gradient(180deg, #fffb00 0%, #ffb300 100%);
+    color: #1a1a1a;
+    font-size: 22px;
+    padding: 18px 40px;
     border-radius: 50px;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 8px 25px rgba(255, 60, 0, 0.4);
+    box-shadow: 0 10px 25px rgba(255, 200, 0, 0.5);
     border: none;
     cursor: pointer;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
 }
 
 .call-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(255, 60, 0, 0.6);
+    box-shadow: 0 15px 35px rgba(255, 200, 0, 0.7);
+    animation: none;
 }
 
 .phone {
     margin-top: 15px;
-    font-size: 22px;
-    font-weight: 700;
+    font-size: 24px;
+    font-weight: 900;
     letter-spacing: 2px;
     opacity: 0.9;
+    color: #fff;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    .text {
+        font-size: 14px;
+    }
+    .call-button {
+        font-size: 20px;
+        padding: 15px 30px;
+    }
 }
