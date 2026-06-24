@@ -57,10 +57,14 @@
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- Инициализация -->
+    <!-- Инициализация с эффектом fade (плавное слайд-шоу) -->
     <script>
         const swiper = new Swiper('.mySwiper', {
             loop: true,
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
             navigation: {
                 nextEl: '.swiper-button-next',
                 prevEl: '.swiper-button-prev',
