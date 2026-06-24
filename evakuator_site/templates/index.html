@@ -24,7 +24,7 @@
                 🔒 <strong>Аккуратная погрузка</strong> — без повреждений
             </div>
 
-            <!-- Карусель Swiper -->
+            <!-- Карусель Swiper (фото) -->
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"><img src="/static/images/photo1.JPG" alt="Эвакуатор 1"></div>
@@ -43,11 +43,80 @@
                     <div class="swiper-slide"><img src="/static/images/photo14.JPG" alt="Эвакуатор 14"></div>
                     <div class="swiper-slide"><img src="/static/images/photo15.JPG" alt="Эвакуатор 15"></div>
                 </div>
-                <!-- Стрелки -->
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
-                <!-- Точки -->
                 <div class="swiper-pagination"></div>
+            </div>
+
+            <!-- Раздел Наши эвакуаторы -->
+            <div class="section fade-in">
+                <h2>🚛 Наши эвакуаторы</h2>
+                <p>Мы используем современные эвакуаторы, которые подходят для любых автомобилей: от легковых до внедорожников и коммерческого транспорта. Все машины проходят регулярное обслуживание и готовы к выезду 24/7.</p>
+            </div>
+
+            <!-- Раздел Цены -->
+            <div class="section fade-in">
+                <h2>💰 Цены</h2>
+                <div class="price-list">
+                    <div class="price-item">
+                        <span class="service">Эвакуация легкового авто</span>
+                        <span class="price">от 2000 ₽</span>
+                    </div>
+                    <div class="price-item">
+                        <span class="service">Эвакуация внедорожника</span>
+                        <span class="price">от 2500 ₽</span>
+                    </div>
+                    <div class="price-item">
+                        <span class="service">Эвакуация коммерческого транспорта</span>
+                        <span class="price">от 3000 ₽</span>
+                    </div>
+                    <div class="price-item">
+                        <span class="service">Перевозка мотоцикла</span>
+                        <span class="price">от 1500 ₽</span>
+                    </div>
+                </div>
+                <p style="margin-top: 15px;">Точная стоимость зависит от расстояния и сложности. Звоните — рассчитаем за минуту!</p>
+            </div>
+
+            <!-- Раздел Отзывы (карусель) -->
+            <div class="section fade-in">
+                <h2>⭐ Отзывы</h2>
+                <div class="reviews-carousel">
+                    <div class="swiper reviewsSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="review-card">
+                                    <div class="review-avatar">👤</div>
+                                    <div class="review-body">
+                                        <p class="review-text">«Очень быстро приехали, аккуратно погрузили мою машину. Спасибо!»</p>
+                                        <p class="review-author">— Иван, Балашиха</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="review-card">
+                                    <div class="review-avatar">👤</div>
+                                    <div class="review-body">
+                                        <p class="review-text">«Выручили ночью на трассе. Цена адекватная, приехали за 20 минут.»</p>
+                                        <p class="review-author">— Елена, Железнодорожный</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="review-card">
+                                    <div class="review-avatar">👤</div>
+                                    <div class="review-body">
+                                        <p class="review-text">«Перевозили офисный фургон. Всё чётко, без повреждений. Рекомендую.»</p>
+                                        <p class="review-author">— ООО "Техника", Реутов</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
             </div>
 
             <a href="tel:+79661510003" class="call-button">📞 Позвонить прямо сейчас</a>
@@ -57,9 +126,9 @@
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <!-- Инициализация с эффектом fade (плавное слайд-шоу) -->
     <script>
-        const swiper = new Swiper('.mySwiper', {
+        // Основная карусель (фото)
+        const swiperMain = new Swiper('.mySwiper', {
             loop: true,
             effect: 'fade',
             fadeEffect: {
@@ -75,6 +144,21 @@
             },
             autoplay: {
                 delay: 3000,
+                disableOnInteraction: false,
+            },
+        });
+
+        // Карусель отзывов
+        const swiperReviews = new Swiper('.reviewsSwiper', {
+            loop: true,
+            slidesPerView: 1,
+            spaceBetween: 0,
+            pagination: {
+                el: '.reviewsSwiper .swiper-pagination',
+                clickable: true,
+            },
+            autoplay: {
+                delay: 4000,
                 disableOnInteraction: false,
             },
         });
